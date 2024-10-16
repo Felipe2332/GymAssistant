@@ -2,11 +2,12 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import TelaInicial from './src/telaInicial';
-import EsqueciSenha from './src/esqueciSenha';
-import ChatbotScreen from './src/chatbotScreen/chatBotScreen';
+import TelaInicial from './src/app/screens/TelaInicial/telaInicial';
+import EsqueciSenha from './src/app/screens/EsqueciSenha/esqueciSenha';
+import ChatbotScreen from './src/app/screens/chatbotScreen/chatBotScreen';
 import { StatusBar } from 'react-native';
-
+import './src/styles/global.css'
+// Depois de importar isso deu certo, Tailwind começou a ser aplicado
 const Stack = createStackNavigator();
 
 export default function App() {

@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, ImageBackground,Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import imagem from '../assets/teste.jpg';
-import logo from '../assets/logo.jpeg'
+import imagem from '../../../../assets/teste.jpg'
+import logo from '../../../../assets/logo.jpeg'
 
 export default function TelaInicial({ navigation }: {navigation: any}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
-  
+  // Comecei aplicar o Tailwind aqui
   return (
-    <ImageBackground source={imagem} style={styles.background}>
-    <View style={styles.container} >
-      <Image source = {logo} style={styles.logo}/>
+    <View className="bg-gray-800 flex-1 items-center justify-center w-full">
+      <Image className="w-[150px] h-[150px] mb-5 bottom-[175px] rounded-lg self-center" source = {logo}/>
       <TextInput
-        style={styles.input}
+        className='h-3 m-3'
         placeholder="Email"
         value={email}
         onChangeText={setEmail}
@@ -39,7 +38,7 @@ export default function TelaInicial({ navigation }: {navigation: any}) {
         <Text style={styles.link}>Chatbot</Text>
       </TouchableOpacity>
     </View>
-    </ImageBackground>
+    
   );
   
 }
